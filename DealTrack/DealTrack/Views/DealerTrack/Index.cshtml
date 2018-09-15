@@ -1,0 +1,67 @@
+﻿@using DealTrack.ViewModels;
+@model IList<DealerTrackIndexVM>
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<p class="bg-danger text-white">  <b>@ViewBag.Error </b>   </p>
+
+@using (Html.BeginForm("Index", "DealerTrack", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="well ">
+
+        <h4>Please upload a CSV file</h4><br />
+        <div class="row">
+            <div class="col-md-3">
+                <input type="file" name="postedFile" class="btn btn-primary" />
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Import" class="btn btn-primary" />
+            </div>
+        </div>
+
+    </div>
+}
+<hr />
+<div class="container">
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>DealNumber</th>
+                    <th>CustomerName</th>
+                    <th>DealershipName</th>
+                    <th>Vehicle</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (DealerTrackIndexVM deal in Model)
+                {
+                    <tr>
+                        <th>@deal.DealNumber</th>
+                        <td>@deal.CustomerName</td>
+                        <td>@deal.DealershipName</td>
+                        <td>@deal.Vehicle</td>
+                        <td>@Html.DisplayFor(c => deal.Price)</td>
+                        <td>@Html.DisplayFor(c => deal.Date)</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+
+</div>
+<br />
+
+@if (Model.Count() > 0)
+{
+    <div class="well "> <span class="bg-info ">  <b>Popular Car Model:</b>  @ViewBag.PopularModel </span> </div>
+}
