@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerTrackDemo", "DealTrack\DealerTrackDemo.csproj", "{2809FCB4-19F7-4170-82F6-F57191932844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerTrackDemo.Tests", "DealTrack.Tests\DealerTrackDemo.Tests.csproj", "{DFA4BE14-3631-49B9-B1C9-2A39265A13EE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerTrackDemoBLL", "DealTrackBLL\DealerTrackDemoBLL.csproj", "{7429D807-E212-4417-962C-49024EF0A25E}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{2809FCB4-19F7-4170-82F6-F57191932844}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2809FCB4-19F7-4170-82F6-F57191932844}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2809FCB4-19F7-4170-82F6-F57191932844}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFA4BE14-3631-49B9-B1C9-2A39265A13EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFA4BE14-3631-49B9-B1C9-2A39265A13EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFA4BE14-3631-49B9-B1C9-2A39265A13EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFA4BE14-3631-49B9-B1C9-2A39265A13EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7429D807-E212-4417-962C-49024EF0A25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7429D807-E212-4417-962C-49024EF0A25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7429D807-E212-4417-962C-49024EF0A25E}.Release|Any CPU.ActiveCfg = Release|Any CPU

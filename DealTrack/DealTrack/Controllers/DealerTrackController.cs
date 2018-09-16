@@ -7,14 +7,20 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
-
+using DealTrack.IServices;
 using DealTrack.ViewModels;
 
 namespace DealTrack.Controllers
 {
     public class DealerTrackController : Controller
     {
+        private ICsvFileService _csvService;
 
+
+        public DealerTrackController(ICsvFileService csvService)
+        {
+            this._csvService = csvService;
+        }
         public ActionResult Index()
         {
             return View(new List<DealerTrackIndexVM>());
@@ -55,7 +61,7 @@ namespace DealTrack.Controllers
 
                         postedFile.SaveAs(filePath);
 
-                        DataTable dt = DealTrackBLL.FileHelper.ConvertCSVtoDataTable(filePath);
+                        DataTable dt = _csvService.ReadCsvFile(filePath);
 
                         foreach (DataRow row in dt.Rows)
                         {
